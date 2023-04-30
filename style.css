@@ -1,0 +1,658 @@
+/* Fonts */
+
+@import url(https://fonts.googleapis.com/css?family=Montserrat:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic);
+body {
+  font-family: Montserrat;
+}
+
+
+/* CSS reset */
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+/* Set core body defaults */
+body {
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Hyperlink style reset */
+a {
+  color: unset;
+  text-decoration: none; /* no underline */
+}
+
+/* Make images easier to work with */
+img,
+picture,
+svg {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+   scroll-behavior: auto;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Color variables */
+
+:root {
+  --clr-bg-main: #FFFFFF;
+  --clr-bg-button: #472f19;
+  --clr-text-main: #1C1C1C;
+  --clr-text-button: #f5f5f5;
+  --clr-text-discount: #CA0606;
+}
+
+/* Font-size variables */
+
+:root {
+  --fs-buy__heading: 1.125rem;
+  --fs-buy__body-text: 0.875rem;
+  --fs-buy__discount: 0.75rem;
+  --fs-buy__btn: 0.75rem;
+  --fs-reviews__heading: 0.875rem;
+  --fs-review__heading: 0.6875rem;
+  --fs-review__body-text: 0.6875rem;
+  --fs-footer__main-text: 0.6875rem;
+  --fs-footer__btn: 0.75rem;
+  --fs-footer__link: 0.625rem;
+}
+
+@media screen and (min-width: 834px) {
+  :root {
+    --fs-buy__heading: 2.25rem;
+    --fs-buy__body-text: 1.25rem;
+    --fs-buy__discount: 1rem;
+    --fs-buy__btn: 1rem;
+    --fs-reviews__heading: 1.25rem;
+    --fs-review__heading: 0.875rem;
+    --fs-review__body-text: 0.875rem;
+    --fs-footer__main-text: 1rem;
+    --fs-footer__btn: 1rem;
+    --fs-footer__link: 1rem;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  :root {
+    --fs-buy__heading: 2.5rem;
+    --fs-buy__body-text: 1.5rem;
+    --fs-buy__discount: 1rem;
+    --fs-buy__btn: 1.25rem;
+    --fs-reviews__heading: 1.5rem;
+    --fs-review__heading: 1rem;
+    --fs-review__body-text: 1rem;
+    --fs-footer__main-text: 1.25rem;
+    --fs-footer__btn: 1rem;
+    --fs-footer__link: 1rem;
+  }
+}
+
+/* Font-weight variables */
+
+:root {
+  --fw-buy__heading: 800;
+  --fw-buy__body-text: 500;
+  --fw-buy__discount: 600;
+  --fw-buy__btn: 600;
+  --fw-reviews__heading: 800;
+  --fw-review__heading: 700;
+  --fw-review__body-text: 500;
+  --fw-footer__main-text: 500;
+  --fw-footer__btn: 600;
+  --fw-footer__link: 600;
+}
+
+/* Line-height variables */
+
+:root {
+  --lh-buy__heading: 22px;
+  --lh-buy__body-text: 17px;
+  --lh-buy__discount: 15px;
+  --lh-buy__btn: 15px;
+  --lh-reviews__heading: 17px;
+  --lh-review__heading: 13px;
+  --lh-review__body-text: 13px;
+  --lh-footer__main-text: 13px;
+  --lh-footer__btn: 15px;
+  --lh-footer__link: 12px;
+}
+
+@media screen and (min-width: 834px) {
+  :root {
+    --lh-buy__heading: 44px;
+    --lh-buy__body-text: 24px;
+    --lh-buy__discount: 20px;
+    --lh-buy__btn: 20px;
+    --lh-reviews__heading: 24px;
+    --lh-review__heading: 17px;
+    --lh-review__body-text: 17px;
+    --lh-footer__main-text: 20px;
+    --lh-footer__btn: 20px;
+    --lh-footer__link: 20px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  :root {
+    --lh-buy__heading: 49px;
+    --lh-buy__body-text: 29px;
+    --lh-buy__discount: 20px;
+    --lh-buy__btn: 24px;
+    --lh-reviews__heading: 29px;
+    --lh-review__heading: 20px;
+    --lh-review__body-text: 20px;
+    --lh-footer__main-text: 24px;
+    --lh-footer__btn: 20px;
+    --lh-footer__link: 20px;
+  }
+}
+
+/* Colors, text-sizes, line-height, text-styling, background */
+
+.page-box {
+  background-image: url('/img/bg-image.svg');
+  background-color: var(--clr-bg-main);
+  background-position: 100% 0%;
+  background-repeat: no-repeat;
+  background-size: 345px;
+}
+
+@media screen and (min-width: 834px) {
+  .page-box {
+    background-size: 519px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .page-box {
+    background-size: 1019px;
+  }
+}
+
+.logo {
+}
+
+
+.buy {
+
+}
+.buy__text-decoration-img {
+}
+.buy__heading {
+  font-size: var(--fs-buy__heading);
+  font-weight: var(--fw-buy__heading);
+  line-height: var(--lh-buy__heading);
+  color: var(--clr-text-main);
+  font-weight: 900;
+}
+.buy__body-text {
+  font-size: var(--fs-buy__body-text);
+  font-weight: var(--fw-buy__body-text);
+  line-height: var(--lh-buy__body-text);
+}
+.buy__discount {
+  font-size: var(--fs-buy__discount);
+  font-weight: var(--fw-buy__discount);
+  line-height: var(--lh-buy__discount);
+  color: var(--clr-text-discount);
+  font-weight: 600;
+}
+.buy__btn {
+  font-size: var(--fs-buy__btn);
+  font-weight: var(--fw-buy__btn);
+  line-height: var(--lh-buy__btn);
+}
+.btn {
+  font-size: var(--fs-bg-button);
+  font-weight: var(--fw-bg-button);
+  line-height: var(--lh-bg-button);
+  color: var(--clr-text-button);
+  background-color: var(--clr-bg-button);
+  font-weight: 600;
+  border: none;
+}
+.reviews {
+
+}
+.reviews__heading {
+  font-size: var(--fs-reviews__heading);
+  font-weight: var(--fw-reviews__heading);
+  line-height: var(--lh-reviews__heading);
+}
+.review {
+
+}
+.review__pic {
+}
+.review__heading {
+  font-size: var(--fs-review__heading);
+  font-weight: var(--fw-review__heading);
+  line-height: var(--lh-review__heading);
+}
+.review__body-text {
+  font-size: var(--fs-review__body-text);
+  font-weight: var(--fw-review__body-text);
+  line-height: var(--lh-review__body-text);
+}
+.divide-line {
+}
+.footer {
+
+}
+.footer__main-text {
+  font-size: var(--fs-footer__main-text);
+  font-weight: var(--fw-footer__main-text);
+  line-height: var(--lh-footer__main-text);
+}
+.footer__btn {
+  font-size: var(--fs-footer__btn);
+  font-weight: var(--fw-footer__btn);
+  line-height: var(--lh-footer__btn);
+}
+.footer__link {
+  font-size: var(--fs-footer__link);
+  font-weight: var(--fw-footer__link);
+  line-height: var(--lh-footer__link);
+}
+.footer__vertical-line {
+}
+
+/* General margins */
+
+.page-box {
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  overflow: auto;
+}
+
+.page-content {
+  margin: 52px 20px 68.5px 20px;
+}
+
+@media screen and (min-width: 834px) {
+  .page-content {
+    margin: 96px 60px 47px 60px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .page-content {
+    margin: 107px 120px 97px 120px;
+  }
+}
+
+/* Top and bottom margins between elements */
+
+.logo {
+  margin: 0 0 143px 0;
+}
+.buy {
+  margin: 0 0 33px 0;
+}
+.buy__heading {
+  margin: 0 0 16px 0;
+}
+.buy__body-text {
+  margin: 0 0 16px 0;
+}
+.buy__discount {
+  margin: 0 0 15px 0;
+}
+.reviews__heading {
+  margin: 0 0 32px 0;
+}
+.review__heading {
+  margin: 0 0 9px 0;
+}
+.review {
+  margin: 0 0 32px 0;
+}
+.divide-line {
+  margin: 5px 0 34px 0;
+}
+.footer {
+  margin: 0 0 68.5px 0;
+}
+.footer__main-text {
+  margin: 0 0 28px 0;
+}
+.footer__btn {
+  margin: 0 0 21px 0;
+}
+
+@media screen and (min-width: 834px) {
+  .logo {
+    margin: 0 0 102px 0;
+  }
+  .buy {
+    margin: 0 0 74px 0;
+  }
+  .buy__heading {
+    margin: 0 0 21px 0;
+  }
+  .buy__body-text {
+    margin: 0 0 16px 0;
+  }
+  .buy__discount {
+    margin: 0 0 21px 0;
+  }
+  .review {
+    margin: 0 0 67px 0;
+  }
+  .reviews__heading {
+    margin: 0 0 53px 0;
+  }
+  .review__heading {
+    margin: 0 0 10px 0;
+  }
+  .divide-line {
+    margin: 87px 0 80px 0;
+  }
+  .footer {
+    margin: 0 0 47px 0;
+  }
+  .footer__main-text {
+    margin: 0 0 53px 0;
+  }
+  .footer__btn {
+    margin: 0 0 42px 0;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .logo {
+    margin: 0 0 136px 0;
+  }
+  .buy {
+    margin: 0 0 86px 0;
+  }
+  .buy__heading {
+    margin: 0 0 26px 0;
+  }
+  .buy__body-text {
+    margin: 0 0 20px 0;
+  }
+  .buy__discount {
+    margin: 0 0 22px 0;
+  }
+  .review {
+    margin: 0 0 88px 0;
+  }
+  .reviews__heading {
+    margin: 0 0 44px 0;
+  }
+  .review__heading {
+    margin: 11px 0 18px 0;
+  }
+  .divide-line {
+    margin: 0 0 62px 0;
+  }
+  .footer {
+    margin: 0 0 97px 0;
+  }
+  .footer__main-text {
+    margin: 0 0 59px 0;
+  }
+  .footer__btn {
+    margin: 0 0 42px 0;
+  }
+}
+
+/* Side margins between elements */
+
+.buy {
+  margin-left: 0;
+}
+.buy__heading {
+  margin-left: 3px;
+}
+.reviews {
+  margin-left: 0px;
+}
+.review {
+  margin-left: 6px;
+}
+.review__pic {
+  margin-right: 13px;
+}
+
+@media screen and (min-width: 834px) {
+  .buy {
+    margin-left: 24px;
+  }
+  .buy__heading {
+    margin-left: 0px;
+  }
+  .reviews {
+    margin-left: 0px;
+  }
+  .review {
+    margin-left: 0px;
+    margin-right: 27px;
+  }
+  .review__pic {
+    margin-right: 22px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .buy {
+    margin-left: 24px;
+  }
+  .buy__heading {
+    margin-left: 0px;
+  }
+  .reviews {
+    margin-left: 24px;
+  }
+  .review {
+    margin-left: 0px;
+    margin-right: 26px;
+  }
+  .review__pic {
+    margin-right: 27px;
+  }
+}
+
+/* Paddings */
+
+.btn {
+  padding: 7.5px 12px 7.5px 12px;
+}
+
+@media screen and (min-width: 834px) {
+  .btn {
+    padding: 20px 24px 20px 24px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .btn {
+    padding: 18px 24px 18px 24px;
+  }
+}
+
+/* Picture sizes */
+
+.page-box {
+  background-size: 345px;
+}
+.logo__img {
+  width: 118px;
+}
+.review__pic {
+  width: 46px;
+}
+.buy__text-decoration-img {
+  width: 26.51px;
+}
+
+@media screen and (min-width: 834px) {
+  .page-box {
+    background-size: 519px;
+  }
+  .logo__img {
+    width: 154px;
+  }
+  .review__pic {
+    width: 92px;
+  }
+  .buy__text-decoration-img {
+    width: 45px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .page-box {
+    background-size: 1019px;
+  }
+  .logo__img {
+    width: 154px;
+  }
+  .review__pic {
+    width: 120px;
+  }
+  .buy__text-decoration-img {
+    width: 45px;
+  }
+}
+
+/* Out of flow elements */
+
+.buy__text-decoration-img {
+  position: absolute;
+  transform: translate(-9.27px, -13.27px) rotate(160deg) ;
+}
+
+@media screen and (min-width: 834px) {
+  .buy__text-decoration-img {
+    transform: translate(-17.66px, -22.66px) rotate(160deg) ;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .buy__text-decoration-img {
+    transform: translate(-17.66px, -19.66px) rotate(160deg) ;
+  }
+}
+
+/* Paragraph max widths */
+
+.buy__body-text-container {
+  max-width: 320px;
+}
+
+.footer {
+  max-width: 281px;
+}
+
+
+@media screen and (min-width: 834px) {
+  .buy__body-text-container {
+    max-width: 486px;
+  }
+
+  .footer {
+    max-width: 562px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .buy__body-text-container {
+    max-width: 486px;
+  }
+
+  .footer {
+    max-width: 685px;
+  }
+}
+
+/* Text alignment */
+
+.footer {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* CSS Flex and Grid */
+
+.reviews__container {
+  display: grid;
+  grid-auto-flow: row;
+}
+
+@media screen and (min-width: 834px) {
+  .reviews__container {
+    grid-auto-flow: column;
+    grid-auto-columns: 1fr;
+  }
+}
+
+.review {
+  display: flex;
+}
+
+/* .review__text {
+  display: grid;
+} */
+
+/* Other positioning */
+
+
