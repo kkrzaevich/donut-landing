@@ -204,7 +204,7 @@ select {
 /* Colors, text-sizes, line-height, text-styling, background */
 
 .page-box {
-  background-image: url('/img/bg-image.svg');
+  background-image: url('public/img/bg-image.svg');
   background-color: var(--clr-bg-main);
   background-position: 100% 0%;
   background-repeat: no-repeat;
