@@ -264,6 +264,7 @@ select {
   background-color: var(--clr-bg-button);
   font-weight: 600;
   border: none;
+  cursor: pointer;
 }
 .reviews {
 
@@ -307,8 +308,6 @@ select {
   font-size: var(--fs-footer__link);
   font-weight: var(--fw-footer__link);
   line-height: var(--lh-footer__link);
-}
-.footer__vertical-line {
 }
 
 /* General margins */
@@ -471,6 +470,10 @@ select {
 .review__pic {
   margin-right: 13px;
 }
+.footer__vertical-line {
+  margin-right: 5px;
+  margin-left: 5px;
+}
 
 @media screen and (min-width: 834px) {
   .buy {
@@ -488,6 +491,10 @@ select {
   }
   .review__pic {
     margin-right: 22px;
+  }
+  .footer__vertical-line {
+    margin-right: 15px;
+    margin-left: 15px;
   }
 }
 
@@ -507,6 +514,10 @@ select {
   }
   .review__pic {
     margin-right: 27px;
+  }
+  .footer__vertical-line {
+    margin-right: 15px;
+    margin-left: 15px;
   }
 }
 
@@ -631,6 +642,12 @@ select {
   margin-right: auto;
 }
 
+.footer__btn {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 /* CSS Flex and Grid */
 
 .reviews__container {
@@ -649,10 +666,20 @@ select {
   display: flex;
 }
 
-/* .review__text {
-  display: grid;
-} */
+.footer__links {
+  display: inline-flex;
+  align-items: end;
+}
 
-/* Other positioning */
+/* Other things */
 
+.footer__vertical-line {
+  border-left: 3px solid var(--clr-bg-button);
+  height: 17.5px;
+}
 
+@media screen and (min-width: 834px) {
+  .footer__vertical-line {
+    height: 35px;
+  }
+}
